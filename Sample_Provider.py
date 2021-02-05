@@ -37,6 +37,8 @@ class SampleProvider(object):
    
   def _transform(self, images_org):
         
+    image = images_org
+
     if self.image_options["crop"]:
         resize_size = int(self.image_options["resize_size"])
         y  = np.random.permutation(range(resize_size//2, images_org.shape[0]-resize_size//2))
